@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motion Art Effect</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #1d1d31;
+        }
+
+        .ink-splash {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            pointer-events: none;
+            transform: scale(0);
+            opacity: 0;
+            animation: splash-animation 0.6s forwards;
+        }
+
+        @keyframes splash-animation {
+            0% {
+                transform: scale(0);
+                opacity: 0.5;
+            }
+            100% {
+                transform: scale(5);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <span class="logo-icon"><img class="evanto" src="./motionarteffect-img2.png"</span> <span><b>Envato</b> Market</span>
+        </div>
+        <button class="buy-btn">Buy now</button>
+    </header>
+    <div class="elementor">
+        <img src="./MotionArtEffect-logo.png" alt=""><button class="purchase-btn">Purchase Now</button>
+</div>
+    <div class="hero">
+        
+        <div class="motion-bg"></div>
+        <div class="content">
+            
+            </div>
+            <div class="side-text">
+                <p><span class="gradient-text">Transform</span><br> Your Website <br>With Motion Art Effect</p>
+            </div>
+            <div class="main-text">
+                <h1>Attract Your Visitors Attention With Colorful</h1>
+                <h1 class="gradient-text">Motion Art Effect</h1>
+                <p>Unleash the power of creativity with Motion Art for Elementor – your ultimate solution for seamlessly integrating captivating animations into your website.</p>
+                
+            </div>
+        </div>
+        <section>
+            <img src="./motionarteffect-img2.png" alt="">
+
+            <img src="./motionarteffect-img1.png" alt="">
+            <img src="./motionarteffect-img3.png" alt="">
+        </section>
+    </div>
+<section class="webs">
+    <img src="./motionarteffect-img8.png">
+</section >
+    <script src="script.js"></script>
+    <script>
+        const colors = ['#ff5733', '#33ff57', '#3357ff', '#f0e130', '#ff33a1', '#33a1ff'];
+    
+        document.addEventListener('mousemove', (e) => {
+            const mouseX = e.clientX;
+            const mouseY = e.clientY;
+    
+            // Create an ink splash
+            const inkSplash = document.createElement('div');
+            inkSplash.classList.add('ink-splash');
+            inkSplash.style.left = `${mouseX - 25}px`;
+            inkSplash.style.top = `${mouseY - 25}px`;
+            inkSplash.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+    
+            // Append to the body
+            document.body.appendChild(inkSplash);
+    
+            // Remove splash after animation ends
+            setTimeout(() => {
+                inkSplash.remove();
+            }, 600);
+        });
+    </script>
+</body>
+</html>

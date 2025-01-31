@@ -1,0 +1,134 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Smooth Font */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1d1d31;
+    color: white;
+}
+
+/* Header Navigation */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: #262626;
+}
+
+.logo {
+    font-size: 22px;
+    
+    display: flex;
+    align-items: center;
+}
+
+.elementor{
+    overflow: hidden;
+    padding: 20px 0px 0px 0px;
+}
+
+.logo-icon {
+    margin-right: 8px;
+}
+.evanto{
+    height: 40px;
+    width: auto;
+    display: inline;
+}
+
+.buy-btn {
+    background: #68b04e;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 50px;
+}
+
+/* Floating Motion Background */
+.motion-bg {
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(36, 32, 63, 0.2), transparent);
+    transition: transform 0.1s ease-out;
+}
+
+/* Content Layout */
+.content {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Left Side Text */
+.side-text {
+    width: 30%;
+    font-size: 1.3rem;
+    color: #bbbbbb;
+}
+
+/* Main Heading Section */
+.main-text {
+    width: 60%;
+    align-content: center;
+    margin: 0px 10px 15px 0px;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.gradient-text {
+    background: linear-gradient(90deg, orange, purple);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Button */
+.purchase-btn {
+    margin-top: 0px;
+    padding: 12px 25px;
+    font-size: 1.2rem;
+    color: white;
+    background: #fff;
+    color: black;
+    
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-left: 90%;
+}
+
+.purchase-btn:hover {
+    background: #1d1d31;
+}
+
+.webs{
+    align-self: center;
+    align-content: center;
+    margin-left: 30px;
+    justify-content: space-between;
+}
+
